@@ -13,6 +13,7 @@
 		B13983361EF3CB98003476F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13983351EF3CB98003476F7 /* Assets.xcassets */; };
 		B13983391EF3CB98003476F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13983371EF3CB98003476F7 /* LaunchScreen.storyboard */; };
 		B13983441EF3CB99003476F7 /* PlateReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13983431EF3CB99003476F7 /* PlateReaderTests.swift */; };
+		B19823D91EF402F20099D0A6 /* VideoOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19823D81EF402F20099D0A6 /* VideoOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B139833F1EF3CB99003476F7 /* PlateReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlateReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13983431EF3CB99003476F7 /* PlateReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateReaderTests.swift; sourceTree = "<group>"; };
 		B13983451EF3CB99003476F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B19823D81EF402F20099D0A6 /* VideoOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoOverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		B139832D1EF3CB98003476F7 /* PlateReader */ = {
 			isa = PBXGroup;
 			children = (
+				B19823D71EF402A40099D0A6 /* Views */,
 				B139832E1EF3CB98003476F7 /* AppDelegate.swift */,
 				B13983301EF3CB98003476F7 /* ViewController.swift */,
 				B13983321EF3CB98003476F7 /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				B13983451EF3CB99003476F7 /* Info.plist */,
 			);
 			path = PlateReaderTests;
+			sourceTree = "<group>";
+		};
+		B19823D71EF402A40099D0A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B19823D81EF402F20099D0A6 /* VideoOverlayView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B13983311EF3CB98003476F7 /* ViewController.swift in Sources */,
+				B19823D91EF402F20099D0A6 /* VideoOverlayView.swift in Sources */,
 				B139832F1EF3CB98003476F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +434,7 @@
 				B139834A1EF3CB99003476F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B139834B1EF3CB99003476F7 /* Build configuration list for PBXNativeTarget "PlateReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +443,7 @@
 				B139834D1EF3CB99003476F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

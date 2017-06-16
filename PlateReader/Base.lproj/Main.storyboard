@@ -1,26 +1,54 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlateReader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ms0-Bh-DIS" customClass="PlaybackView" customModule="PlateReader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTQ-0h-duO" customClass="VideoOverlayView" customModule="PlateReader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xTQ-0h-duO" secondAttribute="bottom" id="0P5-BQ-pe1"/>
+                            <constraint firstItem="ms0-Bh-DIS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7fg-8V-cnv"/>
+                            <constraint firstAttribute="trailing" secondItem="ms0-Bh-DIS" secondAttribute="trailing" id="Ufu-sn-3xb"/>
+                            <constraint firstItem="ms0-Bh-DIS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V1m-0C-A9T"/>
+                            <constraint firstItem="xTQ-0h-duO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aw2-yz-qZx"/>
+                            <constraint firstItem="xTQ-0h-duO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oI4-sc-hHK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ms0-Bh-DIS" secondAttribute="bottom" id="pbn-3S-HZX"/>
+                            <constraint firstAttribute="trailing" secondItem="xTQ-0h-duO" secondAttribute="trailing" id="uOn-NH-jbP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playbackView" destination="ms0-Bh-DIS" id="LTR-xh-CBz"/>
+                        <outlet property="videoOverlayView" destination="xTQ-0h-duO" id="r3D-JK-clv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-218.40000000000001" y="59.820089955022496"/>
         </scene>
     </scenes>
 </document>
